@@ -57,4 +57,4 @@ if st.button("Place Order Now"):
     st.write(f"**Delivery Address:** {delivery_address}")
     st.write(f"**Item:** {item_name} (x{quantity})")
     st.write(f"**Total Amount to Pay:** ₦{total_price}")
-    st.info("Your colleague has received your order ticket!")
+    st.info("We have received your order ticket!")
