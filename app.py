@@ -1,53 +1,55 @@
 import streamlit as st
 
-# --- WEB APP FRONTEND DESIGN ---
-st.title("🍲 Kitchen Citizen Online Order")
+# --- TOP HEADER WITH LOGO SIDE-BY-SIDE ---
+# We use columns to put the logo on the left and the title on the right
+col_logo, col_title = st.columns([1, 4])
+
+with col_logo:
+  # Make sure you save your colleague's logo file as 'logo.png' in the same folder as app.py
+  try:
+    st.image("logo.png", width=100)
+  except:
+    st.write(
+        "🏷️ [Logo]"
+    )  # Fallback text if logo file isn't in the folder yet
+
+with col_title:
+  st.title("🍲 Kitchen Citizen Online Order")
+
 st.write(
     "Welcome! Meals are freshly cooked. Delivery takes 1-2 hrs depending on"
     " your location. Place your order below and we will deliver it to you in"
     " real time."
 )
 
-# --- MENU DISPLAY WITH MOUTH-WATERING IMAGES ---
+# --- MENU DISPLAY ---
 st.subheader("Today's Menu")
 st.markdown("*All rice comes in Basmati rice*")
 
-# Create a 2-column layout for a visual restaurant feel
-col1, col2 = st.columns(2)
+# Rice & Noodles sections (Text only, ready for her custom photos later!)
+st.markdown("""
+### 🍚 Rice Dishes
+- **1. 9ja Smokey Jollof Rice & Turkey** - ₦10,000
+- **2. 9ja Smokey Jollof Rice & Chicken** - ₦9,000
+- **3. Signature Coconut Rice & Turkey** - ₦14,000
+- **4. Signature Coconut Rice & Chicken** - ₦13,000
+- **5. Asun Smokey Jollof Rice & Turkey** - ₦14,000
+- **6. Asun Smokey Jollof Rice & Chicken** - ₦12,500
+- **9. Beef Sausage Meat Rice & Turkey** - ₦15,000
+- **10. Beef Sausage Meat Rice & Chicken** - ₦14,000
 
-with col1:
-  st.markdown("### 🍚 Jollof & Coconut Rice")
-  st.image(
-      "https://images.unsplash.com/photo-1541529086526-db283c563270?w=600",
-      use_container_width=True,
-  )
-  st.markdown("""
-    - **1. 9ja Smokey Jollof & Turkey** - ₦10,000
-    - **2. 9ja Smokey Jollof & Chicken** - ₦9,000
-    - **3. Signature Coconut Rice & Turkey** - ₦14,000
-    - **4. Signature Coconut Rice & Chicken** - ₦13,000
-    - **5. Asun Smokey Jollof & Turkey** - ₦14,000
-    - **6. Asun Smokey Jollof & Chicken** - ₦12,500
-    - **9. Beef Sausage Meat Rice & Turkey** - ₦15,000
-    - **10. Beef Sausage Meat Rice & Chicken** - ₦14,000
-    """)
-
-with col2:
-  st.markdown("### 🍝 Noodles & Pastas")
-  st.image(
-      "https://images.unsplash.com/photo-1621996346565-e3d5d6281298?w=600",
-      use_container_width=True,
-  )
-  st.markdown("""
-    - **7. Special Suya Noodles & Turkey** - ₦10,000
-    - **8. Special Suya Noodles & Chicken** - ₦9,000
-    - **11. Stir Fry Spaghetti & Turkey** - ₦12,500
-    - **12. Stir Fry Spaghetti & Chicken** - ₦11,000
-    - **13. Beef Penne Pasta & Turkey** - ₦13,000
-    - **14. Beef Penne Pasta & Chicken** - ₦12,000
-    """)
+### 🍝 Noodles & Pastas
+- **7. Special Suya Noodles & Turkey** - ₦10,000
+- **8. Special Suya Noodles & Chicken** - ₦9,000
+- **11. Stir Fry Spaghetti & Turkey** - ₦12,500
+- **12. Stir Fry Spaghetti & Chicken** - ₦11,000
+- **13. Beef Penne Pasta & Turkey** - ₦13,000
+- **14. Beef Penne Pasta & Chicken** - ₦12,000
+""")
 
 st.markdown("---")
+
+# Smoothies & Juices Section (Kept the mouth-watering image as requested!)
 st.markdown("### 🥤 Fresh Juices & Smoothies")
 st.image(
     "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=800",
