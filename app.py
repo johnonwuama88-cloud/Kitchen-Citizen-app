@@ -24,16 +24,16 @@ st.write(
 st.subheader("Today's Menu")
 st.markdown("*All rice comes in Basmati rice*")
 
-# --- RICE SECTION WITH HER CUSTOM PHOTO ---
+# --- RICE SECTION WITH IMAGE ---
 st.markdown("### 🍚 Rice Dishes")
-try:
-  st.image(
-      "Jollof.jpg", width=400, caption="Freshly made signature rice dishes"
-  )
-except:
-  st.write(
-      "*(Jollof.jpg image will appear here once placed in the folder)*"
-  )
+for img_name in ["Jollof.jpg", "jollof.jpg", "Jollof.jpeg", "jollof.png"]:
+  try:
+    st.image(
+        img_name, width=400, caption="Freshly made signature rice dishes"
+    )
+    break
+  except:
+    pass
 
 st.markdown("""
 - **1. 9ja Smokey Jollof Rice & Turkey** - ₦10,000
@@ -48,14 +48,14 @@ st.markdown("""
 
 st.markdown("---")
 
-# --- NOODLES SECTION WITH HER CUSTOM PHOTO ---
+# --- NOODLES SECTION WITH IMAGE ---
 st.markdown("### 🍝 Noodles & Pastas")
-try:
-  st.image("Noodles.jpg", width=400, caption="Special Suya Noodles & Pastas")
-except:
-  st.write(
-      "*(Noodles.jpg image will appear here once placed in the folder)*"
-  )
+for img_name in ["Noodles.jpg", "noodles.jpg", "Noodles.jpeg", "noodles.png"]:
+  try:
+    st.image(img_name, width=400, caption="Special Suya Noodles & Pastas")
+    break
+  except:
+    pass
 
 st.markdown("""
 - **7. Special Suya Noodles & Turkey** - ₦10,000
@@ -68,14 +68,19 @@ st.markdown("""
 
 st.markdown("---")
 
-# --- SMOOTHIES SECTION WITH HER CUSTOM PHOTO ---
+# --- SMOOTHIES SECTION WITH IMAGE ---
 st.markdown("### 🥤 Fresh Juices & Smoothies")
-try:
-  st.image("Smoothies.jpg", width=400, caption="Fresh Juices & Smoothies")
-except:
-  st.write(
-      "*(Smoothies.jpg image will appear here once placed in the folder)*"
-  )
+for img_name in [
+    "Smoothies.jpg",
+    "smoothies.jpg",
+    "Smoothies.jpeg",
+    "smoothies.png",
+]:
+  try:
+    st.image(img_name, width=400, caption="Fresh Juices & Smoothies")
+    break
+  except:
+    pass
 
 st.markdown("""
 - **15. Pineapple Juice** - ₦3,000
@@ -159,12 +164,12 @@ if st.button("Place Order Now"):
     st.write(f"**Item:** {food_choice} (x{quantity})")
     st.write(f"**Total Amount to Pay:** ₦{total_price:,}")
 
-    # Bank Transfer Details Added Here
+    # Moniepoint Payment Details
     st.markdown("---")
     st.markdown("### 💳 Payment Instructions")
     st.write(
         "Please make your bank transfer to the account details below, and send"
-        " your payment receipt to delivery confirmation:"
+        " your payment receipt for delivery confirmation:"
     )
     st.info("""
     - **Bank Name:** Moniepoint
