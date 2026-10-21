@@ -1,5 +1,37 @@
 import streamlit as st
 
+# --- CUSTOM CSS STYLING (PASTE HERE) ---
+st.markdown(
+    """
+    <style>
+    /* Change the main background color */
+    .stApp {
+        background-color: #FFF9F5; /* A warm, appetizing cream/peach tint */
+    }
+    
+    /* Style the buttons to look like bold restaurant action buttons */
+    .stButton>button {
+        background-color: #FF5722;
+        color: white;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        width: 100%;
+    }
+    
+    /* Style the subheaders */
+    h3 {
+        color: #D32F2F;
+    }
+    </style>
+""",
+    unsafe_allow_html=True,
+)
+
+# --- TOP HEADER WITH LOGO SIDE-BY-SIDE ---
+col_logo, col_title = st.columns([1, 4])
+# ... (rest of your existing code continues below)
+
 # --- TOP HEADER WITH LOGO SIDE-BY-SIDE ---
 col_logo, col_title = st.columns([1, 4])
 
