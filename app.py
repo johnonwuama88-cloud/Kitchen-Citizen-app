@@ -3,7 +3,7 @@ import streamlit as st
 # --- WEB APP FRONTEND DESIGN ---
 st.title("🍲 Kitchen Citizen Online Order")
 st.write(
-    "Welcome! Place your order below and we will deliver it to you in real"
+    "Welcome! Meal are freshly cooked. Delivery takes 1-2 hrs depending on your location. Place your order below and we will deliver it to you in real"
     " time."
 )
 
@@ -19,9 +19,25 @@ st.markdown("""
 food_choice = st.selectbox(
     "Select your meal:",
     [
-        "Jollof Rice & Chicken (₦2,500)",
-        "Fried Plantain & Fish (₦1,800)",
-        "Bottled Water (₦500)",
+        "9ja Smokey Jollof Rice & Turkey (₦10,000)",
+        "9ja Smokey Jollof Rice & Chicken (₦9,000)",
+        "Signature Coconut Rice & Turkey (₦14,000)",
+        "Signature Coconut Rice & Chicken (₦13,000)",
+        "Asun Smokey Jollof Rice & Turkey (₦14,000)",
+        "Asun Smokey Jollof Rice & Chicken (₦12,500)",
+        "Special Suya Noodles & Turkey (₦10,000)",
+        "Special Suya Noodles & Chicken (₦9,000)",
+        "Beef Sausage Meat Rice & Turkey (₦15,000)",
+        "Beef Sausage Meat Rice & Chicken (₦14,000)",
+        "Stir Fry Spaghetti & Turkey (₦12,500)",
+        "Stir Fry Spaghetti & Chicken (₦11,000)",
+        "Beef Penne Pasta & Turkey (₦13,000)",
+        "Beef Penne Pasta & Chicken (₦12,000)",
+        "Pineapple Juice (₦3,000)",
+        "Banana Smoothie (₦8,000)",
+        "Vita Melon Juice (₦3,000)",
+        "Apple Smoothie (₦10,000)",
+        "Strawberry Smoothie (₦10,000)",
     ],
 )
 
