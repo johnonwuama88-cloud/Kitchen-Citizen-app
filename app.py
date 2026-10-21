@@ -27,10 +27,6 @@ st.subheader("Today's Menu")
 st.markdown("*All rice comes in Basmati rice*")
 
 # Rice & Noodles sections (Text only, ready for her custom photos later!)
-# --- RICE SECTION WITH HER CUSTOM PHOTO ---
-st.markdown("### 🍚 Rice Dishes")
-# This loads her custom photo from the folder
-st.image("Jollof.jpg", width=400, caption="Freshly made Basmati Rice dishes")
 st.markdown("""
 ### 🍚 Rice Dishes
 - **1. 9ja Smokey Jollof Rice & Turkey** - ₦10,000
@@ -50,10 +46,7 @@ st.markdown("""
 - **13. Beef Penne Pasta & Turkey** - ₦13,000
 - **14. Beef Penne Pasta & Chicken** - ₦12,000
 """)
-# --- NOODLES SECTION WITH HER CUSTOM PHOTO ---
-st.markdown("### 🍝 Noodles & Pastas")
-# This loads her custom noodles photo from the folder
-st.image("Noodles.jpg", width=400, caption="Special Suya Noodles & Pastas")
+
 st.markdown("---")
 
 # Smoothies & Juices Section (Kept the mouth-watering image as requested!)
@@ -69,10 +62,7 @@ st.markdown("""
 - **18. Apple Smoothie** - ₦10,000
 - **19. Strawberry Smoothie** - ₦10,000
 """)
-# --- SMOOTHIES SECTION WITH HER CUSTOM PHOTO ---
-st.markdown("### 🍝 Smoothies & Juices")
-# This loads her custom Smoothies photo from the folder
-st.image("Smoothies.jpg", width=400, caption="Fresh Smoothies and Juices")
+
 st.markdown("---")
 
 # --- USER INPUT WIDGETS ---
