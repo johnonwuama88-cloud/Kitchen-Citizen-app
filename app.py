@@ -9,10 +9,18 @@ st.write(
 
 # --- MENU DISPLAY ---
 st.subheader("Today's Menu")
+st.subheader ("all rice comes in Basmati rice") 
 st.markdown("""
-- **1. Jollof Rice & Chicken** - ₦2,500
-- **2. Fried Plantain & Fish** - ₦1,800
-- **3. Bottled Water** - ₦500
+- **1. 9ja Smokey Jollof Rice & Turkey** - ₦10,000
+- **2. 9ja Smokey Jollof Rice & Chicken** - ₦9,000
+- **3. Signature Coconut Rice & Turkey** - ₦14,000
+- **4. Signature Coconut Rice & Chicken - ₦13,000
+- **5. Asun Smokey Jollof Rice & Turkey - ₦14,000
+- **6. Asun Smokey Jollof Rice & Chicken - ₦12,500
+- **7. Special Suya Noodles & Turkey - ₦10,000
+- **8. Special Suya Noodles & Chicken - ₦9,000
+- **9. Beef Sausage Meat Rice & Turkey - ₦15,000
+- **10. Beef Sausage Meat Rice & Chicken - ₦14,000
 """)
 
 # --- USER INPUT WIDGETS ---
