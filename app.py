@@ -1,17 +1,15 @@
 import streamlit as st
 
 # --- TOP HEADER WITH LOGO SIDE-BY-SIDE ---
-# We use columns to put the logo on the left and the title on the right
 col_logo, col_title = st.columns([1, 4])
 
 with col_logo:
-  # Make sure you save your colleague's logo file as 'logo.png' in the same folder as app.py
   try:
-    st.image("logo.png", width=100)
+    st.image(
+        "logo.png", width=100
+    )  # Make sure her logo is saved as logo.png on desktop
   except:
-    st.write(
-        "🏷️ [Logo]"
-    )  # Fallback text if logo file isn't in the folder yet
+    st.write("🏷️ [Logo]")
 
 with col_title:
   st.title("🍲 Kitchen Citizen Online Order")
@@ -26,9 +24,18 @@ st.write(
 st.subheader("Today's Menu")
 st.markdown("*All rice comes in Basmati rice*")
 
-# Rice & Noodles sections (Text only, ready for her custom photos later!)
+# --- RICE SECTION WITH HER CUSTOM PHOTO ---
+st.markdown("### 🍚 Rice Dishes")
+try:
+  st.image(
+      "Jollof.jpg", width=400, caption="Freshly made signature rice dishes"
+  )
+except:
+  st.write(
+      "*(Jollof.jpg image will appear here once placed in the folder)*"
+  )
+
 st.markdown("""
-### 🍚 Rice Dishes
 - **1. 9ja Smokey Jollof Rice & Turkey** - ₦10,000
 - **2. 9ja Smokey Jollof Rice & Chicken** - ₦9,000
 - **3. Signature Coconut Rice & Turkey** - ₦14,000
@@ -37,8 +44,20 @@ st.markdown("""
 - **6. Asun Smokey Jollof Rice & Chicken** - ₦12,500
 - **9. Beef Sausage Meat Rice & Turkey** - ₦15,000
 - **10. Beef Sausage Meat Rice & Chicken** - ₦14,000
+""")
 
-### 🍝 Noodles & Pastas
+st.markdown("---")
+
+# --- NOODLES SECTION WITH HER CUSTOM PHOTO ---
+st.markdown("### 🍝 Noodles & Pastas")
+try:
+  st.image("Noodles.jpg", width=400, caption="Special Suya Noodles & Pastas")
+except:
+  st.write(
+      "*(Noodles.jpg image will appear here once placed in the folder)*"
+  )
+
+st.markdown("""
 - **7. Special Suya Noodles & Turkey** - ₦10,000
 - **8. Special Suya Noodles & Chicken** - ₦9,000
 - **11. Stir Fry Spaghetti & Turkey** - ₦12,500
@@ -49,12 +68,15 @@ st.markdown("""
 
 st.markdown("---")
 
-# Smoothies & Juices Section (Kept the mouth-watering image as requested!)
+# --- SMOOTHIES SECTION WITH HER CUSTOM PHOTO ---
 st.markdown("### 🥤 Fresh Juices & Smoothies")
-st.image(
-    "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=800",
-    use_container_width=True,
-)
+try:
+  st.image("Smoothies.jpg", width=400, caption="Fresh Juices & Smoothies")
+except:
+  st.write(
+      "*(Smoothies.jpg image will appear here once placed in the folder)*"
+  )
+
 st.markdown("""
 - **15. Pineapple Juice** - ₦3,000
 - **16. Banana Smoothie** - ₦8,000
@@ -129,11 +151,23 @@ if st.button("Place Order Now"):
     unit_price = menu_prices.get(food_choice, 0)
     total_price = unit_price * quantity
 
-    # --- DISPLAY RECEIPT ON THE WEB PAGE ---
+    # --- DISPLAY RECEIPT & PAYMENT DETAILS ---
     st.success("Order Placed Successfully! 🎉")
     st.markdown("### Order Summary")
     st.write(f"**Customer:** {customer_name}")
     st.write(f"**Delivery Address:** {delivery_address}")
     st.write(f"**Item:** {food_choice} (x{quantity})")
     st.write(f"**Total Amount to Pay:** ₦{total_price:,}")
-    st.info("We have received your order ticket!")
+
+    # Bank Transfer Details Added Here
+    st.markdown("---")
+    st.markdown("### 💳 Payment Instructions")
+    st.write(
+        "Please make your bank transfer to the account details below, and send"
+        " your payment receipt to delivery confirmation:"
+    )
+    st.info("""
+    - **Bank Name:** Moniepoint
+    - **Account Number:** 5336678922
+    - **Account Name:** Kitchen Citizen
+    """)
