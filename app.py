@@ -9,7 +9,7 @@ st.write(
 
 # --- MENU DISPLAY ---
 st.subheader("Today's Menu")
-st.subheader ("all rice comes in Basmati rice") 
+st.subheader ("All rice comes in Basmati rice") 
 st.markdown("""
 - **1. 9ja Smokey Jollof Rice & Turkey** - ₦10,000
 - **2. 9ja Smokey Jollof Rice & Chicken** - ₦9,000
